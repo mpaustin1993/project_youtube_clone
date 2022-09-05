@@ -36,7 +36,12 @@ const ChannelDetail = () => {
           height: "300px",
         }}
       />
-      <ChannelCard channelDetail={channelDetail} />
+      {/* only place where marginTop passed so it's null otherwise */}
+      <ChannelCard channelDetail={channelDetail} marginTop="-110px" />
+      <Box display="flex" p="2">
+        <Box sx={{ mr: { sm: "100px" } }}></Box>
+        <Videos videos={videos} />
+      </Box>
     </Box>
   );
 };
